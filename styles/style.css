@@ -3,4 +3,11 @@
 
 .font-raleway{
     font-family: "Raleway", sans-serif;  
+};
+
+.selected-price{
+display: flex;
+justify-content: space-around;
 }
+
+
