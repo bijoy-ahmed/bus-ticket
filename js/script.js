@@ -47,7 +47,7 @@ for(const btn of allKtn){
 
         updateTotalCost(seatPrice);
         updateGrandTotal();
-    })
+    });
 }
 
 
