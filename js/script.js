@@ -7,7 +7,24 @@ for(const btn of allKtn){
 
         const selectedPriceContainer = document.getElementById('Select-price-container');
 
+        event.target.setAttribute('disabled' , false);
+        
+
+       const firstCount = getConvertedValue('seat');
+       if(firstCount + 1 > 4){
+        alert('Your selected seat are limited')
+        return;
+       }
+        
+       event.target.style.backgroundColor ='#4CAF50';
+
         // update seat
+        const seatCount = getConvertedValue('seat');
+        document.getElementById('seat').innerText = seatCount + 1;
+
+        const leftSeatCount = getConvertedValue('left-seat');
+        document.getElementById('left-seat').innerText = leftSeatCount - 1;
+
 
         const div = document.createElement('div');
         div.classList.add('flex');
