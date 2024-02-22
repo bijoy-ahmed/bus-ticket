@@ -62,18 +62,19 @@ if (status == undefined){
 else{
    const couponCode =document.getElementById('Coupon-code').value;
 
-   if(couponCode =='NEW15' || couponCode == 'Couple 20'){
+   if(couponCode =='NEW15'){
 const discounted = totalPrice * 0.2;
 document.getElementById('grand-total').innerText = totalPrice - discounted;
+}
+ else{
+    if(couponCode =='Couple 20'){
+        const discounted = totalPrice * 0.15;
+        document.getElementById('grand-total').innerText = totalPrice - discounted;
+    }
+ } 
+}
+}
 
-   }
-   else{
-alert('please enter a valid coupon code');
-   
-   }
-   
-}
-}
 
 function updateTotalCost(seatPrice){
     const totalPrice = getConvertedValue('total-price');
@@ -81,6 +82,20 @@ function updateTotalCost(seatPrice){
     document.getElementById('total-price').innerText = sum;
 }
 
+
+document.getElementById('phone-number').addEventListener('keyup' , function(event){
+const text = event.target.value;
+const deleteButton = document.getElementById('btn-delete')
+if(text.length>0 ){
+    deleteButton.removeAttribute('disabled');
+   }
+   else{
+    deleteButton.setAttribute('disabled', true);
+   }
+});
+document.getElementById('btn-more').addEventListener('click', function(){
+
+})
 
 
 function getConvertedValue(id){

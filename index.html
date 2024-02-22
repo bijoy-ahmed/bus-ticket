@@ -11,8 +11,8 @@
 <!-- css link -->
 <link rel="stylesheet" href="styles/style.css">
 
-<!-- raleway font link -->
-
+<!-- font awesome link -->
+<script src="https://kit.fontawesome.com/021199af80.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -62,7 +62,7 @@
                     <h1 class="mb-5 text-5xl font-bold">End to End Travel with <br>
                     ALHAMDULILLAH</h1>
                     <p class="mb-5">This is a VIP Bus. We are provides lots of service for that you feel comfortable by us .Thank you !</p>
-                    <button class="btn bg-green-500">Buy Tickets</button>
+                    <button class="btn bg-green-500"><a href="#seat-section">Buy Tickets</a></button>
                   </div>
                 </div>
               </div>
@@ -184,7 +184,7 @@
         </div>
         <!--  -->
         <div class="text-green-400">
-          <p></p>
+          <p>|</p>
           <p>|</p>
           <p>|</p>
           <p>|</p>
@@ -206,12 +206,12 @@
       </section>
 
       <!-- seat section -->
-      <section class="bg-[#F7F8F8] mt-5  mb-10">
-       <div class="container  grid lg:grid-cols-2 items-center mx-auto">
+      <section id="seat-section" class="bg-[#F7F8F8] mt-5  mb-10">
+       <div class="container  flex justify-around mx-auto">
         <div class="w-80">
         <h2 class="text-2xl font-semibold">Select Your Seat</h2>
         <hr>
-        <div class="content-contrainer flex justify-between items-center mt-2">
+        <div class="content-contrainer flex justify-between items-center mt-4">
          <div class="flex items-center gap-2 ">
           <img src="images/seat-gray.png" alt="">
           <p>Available</p>
@@ -227,11 +227,11 @@
 
         <div class="text-end mt-3">
           <a class="btn rounded-xl">
-                <img src="images/.png" alt="">
+            <i class="fa-solid fa-recycle"></i>
              </a>
             </div>
     <!--  --> 
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center mt-5 gap-2">
       <div class="gap-6">
         <kbd class="kbd btn">A1</kbd>
         <kbd class="kbd btn">A2</kbd>
@@ -259,7 +259,7 @@
      <div class="">
       <h2 class="text-2xl font-semibold">Select Your Seat</h2>
 
-      <div class="grid grid-cols-3 ">
+      <div class="grid grid-cols-3 mt-4">
         <h2 class="font-bold ">Seat<sup class="bg-green-400" id="seat">0</sup></h2>
         <h2 class="font-bold">Class</h2>
         <h2 class="font-bold">Price</h2>
@@ -274,7 +274,7 @@
         <h2 class="text-md font-bold">BDT <span id="total-price">0</span> </h2>
       </div>
  <!-- Coupon code  -->
-    <div class="mt-6  justify-between items-center ">
+    <div class="mt-6 flex  gap-6 justify-between items-center ">
       <input id="Coupon-code" type="text" placeholder="Coupon code" class="input input-bordered w-full max-w-xs" />
       <button onclick="updateGrandTotal('apply-btn')" id="apply" class="btn bg-green-500 border border-green-300 rounded-xl text-white">Apply</button>
 
@@ -284,10 +284,19 @@
       <h2 class="text-md font-bold">Grand Total</h2>
       <h2 class="text-md font-bold">BDT <span id="grand-total">0</span></h2>
     </div>
+<div class="mt-8">
+  <h1 class="text-lg font-semibold ">Passenger Name*</h1>
+  <input type="text" placeholder="Your Name" class="input input-bordered mt-2 w-full max-w-xs" />
 
+  <h1 class="text-lg font-semibold ">Phone Number*</h1>
+  <input id="phone-number" type="text" placeholder="Phone Number" class="input input-bordered mt-2 w-full max-w-xs" />
+
+  <h1 class="text-lg font-semibold ">Email ID</h1>
+  <input type="text" placeholder="Your email" class="input input-bordered mt-2 w-full max-w-xs" />
+</div>
     <div class="mt-8">
      <!-- Open the modal using ID.showModal() method -->
-<button class="btn bg-green-500 text-white w-full" onclick="my_modal_5.showModal()">Next</button>
+<button id="btn-delete" class="btn bg-green-500 text-white w-full" onclick="my_modal_5.showModal()"  disabled>Next</button>
 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box text-center">
     <img class="mx-auto" src="images/success.png" alt="">
@@ -296,9 +305,9 @@
       We are working hard to find the best service and deals for you. </p>
       <p>Shortly you will find a confirmation your email </p>
     <div class="modal-action ">
-      <form method="dialog">
+      <form method="dialog" class=" w-full">
         <!-- if there is a button in form, it will close the modal -->
-        <button class="btn w-full bg-green-500 text-white">Continue</button>
+        <button  class="btn  bg-green-500 text-white">Continue</button>
       </form>
     </div>
   </div>
